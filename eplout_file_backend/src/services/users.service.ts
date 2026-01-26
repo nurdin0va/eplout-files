@@ -4,7 +4,7 @@ interface IBody {
   email: string
   avatar: string
 }
-
+// postUserServiee
 export const postService = async (body: IBody) => {
   const response = await pool.query(
     `
@@ -16,6 +16,7 @@ export const postService = async (body: IBody) => {
   )
   return response.rows[0]
 }
+//getUserService
 export const getService = async () => {
   const response = await pool.query(`SELECT * FROM usersfile`)
   return response.rows

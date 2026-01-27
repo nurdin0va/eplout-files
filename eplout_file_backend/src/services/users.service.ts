@@ -21,6 +21,7 @@ export const getService = async () => {
   const response = await pool.query(`SELECT * FROM usersfile`)
   return response.rows
 }
+//gitUserOneService
 export const getOneService = async (id: number):Promise<IBody> => {
   const response = await pool.query(
     `SELECT * FROM usersfile WHERE id=$1`,
@@ -31,6 +32,7 @@ export const getOneService = async (id: number):Promise<IBody> => {
   }
   return response.rows[0]
 }
+
 export const deleteService = async (id: number) => {
   const response = await pool.query(
     `

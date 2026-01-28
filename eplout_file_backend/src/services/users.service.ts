@@ -32,7 +32,7 @@ export const getOneService = async (id: number):Promise<IBody> => {
   }
   return response.rows[0]
 }
-
+//deleteUserService
 export const deleteService = async (id: number) => {
   const response = await pool.query(
     `

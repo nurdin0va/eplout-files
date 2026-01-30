@@ -47,6 +47,7 @@ export const deleteService = async (id: number) => {
   }
   return response.rows[0]
 }
+//updateUserService
 export const updateService = async (id: number, update: IBody) => {
   const response = await pool.query(
     `
